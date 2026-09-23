@@ -1,0 +1,73 @@
+site_name: Programación en Python
+site_description: Apuntes y autoevaluación de Python para el alumnado de SMR
+docs_dir: docs
+use_directory_urls: false   # permite abrir el sitio generado directamente desde el disco (sin servidor)
+
+theme:
+  name: material
+  language: es
+  font: false               # sin Google Fonts: el sitio funciona sin conexión a internet
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+plugins:
+  - search:
+      lang: es
+  - offline
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+
+nav:
+  - Inicio: index.md
+  - Cómo se evalúa: evaluacion.md
+  - UT01. Elementos de un programa:
+      - ut01/index.md
+      - "a) Estructura y bloques": ut01/a-estructura.md
+      - "b) Variables": ut01/b-variables.md
+      - "c) Tipos de datos": ut01/c-tipos.md
+      - "d) Literales": ut01/d-literales.md
+      - "e) Constantes": ut01/e-constantes.md
+      - "f) Operadores y expresiones": ut01/f-operadores.md
+      - "g) Conversiones de tipo": ut01/g-conversiones.md
+      - "h) Comentarios": ut01/h-comentarios.md
+      - Autoevaluación: ut01/autoevaluacion.md
+  - UT02. Estructuras de control:
+      - ut02/index.md
+      - "a) Selección": ut02/a-seleccion.md
+      - "b) Repetición": ut02/b-repeticion.md
+      - "c) Salto": ut02/c-salto.md
+      - "d) Excepciones": ut02/d-excepciones.md
+      - Autoevaluación: ut02/autoevaluacion.md
