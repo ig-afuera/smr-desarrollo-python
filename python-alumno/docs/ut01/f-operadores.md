@@ -57,6 +57,32 @@ Además de `=`, existe la **asignación aumentada**, que abrevia operaciones sob
 130
 ```
 
+!!! success "Ahora tú"
+    Prueba en la consola todos los operadores de asignación. Antes de pulsar Enter en cada línea, **predice** qué valor tendrá `x`:
+
+    ```python
+    x = 10
+    x += 3
+    print(x)
+    x -= 5
+    print(x)
+    x *= 4
+    print(x)
+    x /= 2
+    print(x)
+    x //= 3
+    print(x)
+    x %= 3
+    print(x)
+    x **= 3
+    print(x)
+    ```
+
+    Después responde:
+
+    1. ¿De qué tipo es `x` tras ejecutar `x /= 2`? ¿Y tras `x //= 3`? Compruébalo con `type(x)`.
+    2. Reescribe cada línea con su forma larga (por ejemplo, `x += 3` como `x = x + 3`) y verifica que el resultado es el mismo.
+
 ## 3. Operadores de comparación
 
 Comparan dos valores y devuelven un `bool`.
