@@ -59,6 +59,26 @@ Se pueden escribir con comillas **simples** o **dobles**; es indiferente, pero h
 "Es la casa de Ana's"
 ```
 
+!!! success "Ahora tú"
+    Prueba en la consola estos dos ejemplos y explica qué ocurre en cada uno.
+
+    1. Mezclando comillas dobles y simples (un tipo de comillas dentro del otro):
+
+        ```python
+        frase_1 = "Es la casa de Ana's"
+        frase_2 = 'Ana dijo "hola"'
+        print(frase_1)
+        print(frase_2)
+        ```
+
+    2. Cerrando mal a propósito (abres con comillas simples y cierras con dobles):
+
+        ```python
+        frase_3 = 'Hola mundo"
+        ```
+
+    ¿Por qué el primer caso funciona y el segundo da error?
+
 ### Comillas triples: varias líneas
 
 ```python
