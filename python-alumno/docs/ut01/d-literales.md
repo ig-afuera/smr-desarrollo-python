@@ -158,6 +158,28 @@ Después de los dos puntos `:` puedes indicar el **formato**:
 !!! tip "Consejo"
     `:.2f` es la forma habitual de mostrar **dinero**. Úsala siempre en tickets y facturas.
 
+!!! success "Ahora tú"
+    Prueba en la consola este código y comprueba qué hace cada formato:
+
+    ```python
+    producto = "Ratón"
+    unidades = 7
+    precio = 12.5
+    descuento = 0.15
+
+    print(f"Producto: {producto:>10}")
+    print(f"Código:   {unidades:05d}")
+    print(f"Precio:   {precio:.2f} €")
+    print(f"Total:    {unidades * precio:,.2f} €")
+    print(f"Descuento: {descuento:.0%}")
+    ```
+
+    Ahora modifica los valores y los formatos:
+
+    1. Cambia `producto` por un nombre más largo y prueba `:<10` y `:^10`.
+    2. Pon `unidades = 1200` y `precio = 999.99`. ¿Cómo se ve el total con `:,.2f`?
+    3. Muestra el precio con 3 decimales y el descuento con 1 decimal.
+
 ## 3. Literales lógicos
 
 Solo hay dos: `True` y `False`. Se escriben siempre con la primera letra mayúscula (`true` no existe en Python).
