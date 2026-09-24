@@ -165,6 +165,12 @@ if edad >= 18:
 print("Fin del programa")           # fuera del bloque
 ```
 
+!!! success "Prueba tu"
+    - Copia en tu editor favorito de código el ejemplo anterior.
+    - Ejecuta el código cambiando edad por 17 y observa lo que pasa.
+    - Pon la linea que indica el mensaje **puedes votar** al mismo nivel de la de **fin de programa**.
+    - Ejecútalo y explica el resultado obtenido.
+
 !!! note "Adelanto"
     `if` se estudia en la [UT02](../ut02/a-seleccion.md). Aquí solo interesa ver cómo se forma un bloque.
 
@@ -203,6 +209,11 @@ Las palabras reservadas son las que Python usa para su propia sintaxis. Puedes v
 
 **Convención (PEP 8):** nombres en minúsculas y separando palabras con guion bajo (*snake_case*): `precio_final`, `numero_alumnos`.
 Elige nombres que **expliquen qué guardan**: `precio_final` es mejor que `x` o `pf`.
+
+!!! success "Prueba tu"
+    - Abre la consola de Python
+    - Intenta esto ```And = 10```
+    - Explica porque python SI admite esta accion.
 
 ## 6. Fases de desarrollo
 
