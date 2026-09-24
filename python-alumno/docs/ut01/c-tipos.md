@@ -116,8 +116,6 @@ True
 True
 ```
 
-!!! warning "Trampa habitual"
-    `bool("False")` es `True`, porque es un texto con contenido. `bool` no «lee» el texto: solo mira si está vacío o no.
 
 ## 4. Tipo cadena: `str`
 
