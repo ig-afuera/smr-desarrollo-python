@@ -185,11 +185,18 @@ es_alumno: bool = True
 ```python
 edad: int = "dieciséis"      # el editor te avisará, pero Python lo ejecuta
 ```
+!!! success "Prueba tu"
+    Ejecuta el siguiente codigo. Sabes el porque del resultado que da type.
+    ```python
+    nombre: str = 16
+    type(nombre)
+    ```
+
 
 ## Resumen
 
 - Los cuatro tipos básicos: `int`, `float`, `bool`, `str`. Con `type()` los identificas.
-- Python es de tipado **dinámico** (el tipo lo decide el valor) y **fuerte** (no mezcla tipos sin sentido).
+- Python es de tipado **dinámico**: el tipo lo decide el valor y una variable puede cambiar de tipo. En Java (tipado **fuerte**), en cambio, el tipo de una variable queda fijado al declararla.
 - `/` siempre devuelve `float`. Los `float` pueden tener pequeños errores de redondeo.
 - Son *falsy*: `0`, `0.0` y `""`. Todo lo demás es *truthy*.
 - Los tipos básicos son **inmutables**.
