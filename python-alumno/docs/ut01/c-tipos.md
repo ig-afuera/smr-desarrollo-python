@@ -27,22 +27,28 @@ Con `type()` puedes preguntar el tipo de cualquier valor.
 ## 1. Tipado dinámico y fuerte
 
 - **Dinámico**: no declaras el tipo de una variable; Python lo deduce del valor, y la misma variable puede cambiar de tipo.
-- **Fuerte**: Python **no mezcla tipos** de forma que no tenga sentido. No convierte por ti un texto en número.
+- **Fuerte**: en lenguajes como **Java**, cuando declaras una variable indicas su tipo, y ese tipo queda **fijado para siempre**. A partir de ahí la variable solo puede guardar valores de ese tipo. Si intentas guardar otro, el programa ni siquiera llega a ejecutarse.
+
+```java
+int edad = 16;           // edad es un int, y lo será siempre
+edad = 17;               // correcto: sigue siendo un int
+edad = "dieciséis";      // ERROR: incompatible types: String cannot be converted to int
+```
+
+En Python, en cambio, la misma variable puede pasar de un tipo a otro sin problema:
 
 ```pycon
 >>> x = 5
+>>> type(x)
+<class 'int'>
 >>> x = "cinco"          # dinámico: cambia de int a str sin problema
->>> "5" + 3              # fuerte: no se puede sumar texto y número
-Traceback (most recent call last):
-  ...
-TypeError: can only concatenate str (not "int") to str
+>>> type(x)
+<class 'str'>
 ```
 
 ## 2. Tipos numéricos: `int` y `float`
 
 ### `int` (enteros)
-
-- No tienen límite de tamaño (solo la memoria disponible).
 
 ```pycon
 >>> 2 ** 100
