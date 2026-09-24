@@ -114,14 +114,6 @@ True
 !!! warning "`=` no es `==`"
     `=` **asigna**; `==` **compara**. Confundirlos es uno de los errores más comunes al empezar.
 
-!!! warning "No compares decimales con `==`"
-    ```pycon
-    >>> 0.1 + 0.2 == 0.3
-    False
-    >>> import math
-    >>> math.isclose(0.1 + 0.2, 0.3)
-    True
-    ```
 
 ## 4. Operadores lógicos
 
