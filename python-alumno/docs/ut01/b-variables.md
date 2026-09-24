@@ -118,6 +118,90 @@ saludar()
 # print(destinatario)         # daría NameError: aquí ya no existe
 ```
 
+!!! success "Prueba tu"
+    Antes de ejecutar cada ejemplo, **apunta en un papel qué crees que va a mostrar**. Después cópialo en tu editor, ejecútalo y compara.
+
+    **Ejemplo 1: una variable creada dentro de una función**
+
+    ```python
+    def preparar_mochila():
+        objeto = "cuaderno"
+        print("Dentro:", objeto)
+
+
+    preparar_mochila()
+    print("Fuera:", objeto)
+    ```
+
+    - ¿Qué línea se ejecuta bien y cuál falla? ¿Qué error aparece?
+    - Borra la última línea y vuelve a ejecutar. ¿Qué deduces sobre dónde «vive» `objeto`?
+
+    **Ejemplo 2: una variable creada fuera de la función**
+
+    ```python
+    temperatura = 22
+
+
+    def mostrar_tiempo():
+        print("Hace", temperatura, "grados")
+
+
+    mostrar_tiempo()
+    temperatura = 30
+    mostrar_tiempo()
+    ```
+
+    - ¿Puede la función usar `temperatura` aunque no se haya creado dentro de ella?
+    - ¿Por qué la segunda llamada muestra un valor distinto a la primera?
+    - Mueve la línea `temperatura = 22` para que quede **debajo** de la primera llamada a `mostrar_tiempo()`. ¿Qué ocurre ahora y por qué?
+
+    **Ejemplo 3: el mismo nombre dentro y fuera**
+
+    ```python
+    puntos = 100
+
+
+    def perder_vida():
+        puntos = 50
+        print("Dentro de la función:", puntos)
+
+
+    perder_vida()
+    print("Fuera de la función:", puntos)
+    ```
+
+    - ¿Cuánto valen los `puntos` de fuera después de llamar a `perder_vida()`?
+    - ¿Son la misma variable las dos `puntos`? Compruébalo añadiendo `print(id(puntos))` dentro y fuera de la función.
+
+    **Ejemplo 4: leer una variable antes de asignarla (reto)**
+
+    ```python
+    nivel = 1
+
+
+    def mostrar_nivel():
+        print("Nivel actual:", nivel)
+
+
+    def subir_nivel():
+        print("Nivel antes:", nivel)
+        nivel = 2
+        print("Nivel después:", nivel)
+
+
+    mostrar_nivel()
+    subir_nivel()
+    print("Nivel fuera:", nivel)
+    ```
+
+    - ¿Qué muestra `mostrar_nivel()`? ¿Cómo puede usar `nivel` si no se creó dentro de ella?
+    - `subir_nivel()` falla en su primera línea, que es idéntica a la de `mostrar_nivel()`. ¿Qué error aparece? Fíjate en la palabra que acompaña a *variable* en el mensaje.
+    - Cuando se produce el error, ¿existe un `nivel` global? Entonces, ¿por qué Python no lo usa?
+    - Borra la línea `print("Nivel antes:", nivel)` y vuelve a ejecutar. ¿Qué muestra ahora la función? ¿Cuánto vale `nivel` fuera?
+    - Recupera esa línea y cambia `nivel = 2` por `nuevo_nivel = 2` (y el último `print` de la función para que muestre `nuevo_nivel`). ¿Por qué ya no falla?
+
+    Con lo que has observado, escribe con tus palabras **tres reglas**: una sobre lo que puede ver una función, otra sobre lo que ocurre al asignar un valor dentro de ella y otra sobre qué pasa si usas una variable dentro de una función antes de asignarle un valor.
+
 !!! note "Adelanto"
     Las funciones se estudian en la [UT03](../index.md). Por ahora, todas tus variables serán globales. Lo importante es que sepas que las locales existen.
 
