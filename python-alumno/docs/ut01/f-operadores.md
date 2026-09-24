@@ -173,6 +173,50 @@ Además, `and` y `or` devuelven **uno de sus operandos**, no siempre un `bool`. 
 'Ana'
 ```
 
+!!! success "Ahora tú"
+    Para practicar en clase. En cada caso, **sustituye los valores a mano** y escribe en papel si el resultado será `True` o `False`. Después ejecútalo en la consola y comprueba si acertaste.
+
+    **Operación 1. ¿Puede conducir?**
+
+    ```python
+    edad = 17
+    tiene_carnet = True
+    va_acompanado = False
+
+    puede_conducir = (edad >= 18 and tiene_carnet) or (edad >= 16 and tiene_carnet and va_acompanado)
+    print(puede_conducir)
+    ```
+
+    **Operación 2. ¿Salta la alerta del servidor?**
+
+    ```python
+    cpu = 95
+    ram = 60
+    disco_lleno = False
+    servicio_activo = True
+
+    alerta = (cpu > 90 or ram > 80) and not disco_lleno and servicio_activo
+    print(alerta)
+    ```
+
+    **Operación 3. ¿Se concede el acceso?**
+
+    ```python
+    usuario = "admin"
+    clave = "1234"
+    intentos = 2
+    cuenta_bloqueada = False
+
+    acceso = (usuario == "admin" or usuario == "root") and clave == "1234" and intentos < 3 and not cuenta_bloqueada
+    print(acceso)
+    ```
+
+    Ahora cambia los valores:
+
+    1. Modifica **una sola variable** de cada operación para que el resultado sea el contrario.
+    2. Encuentra unos valores en la operación 1 que la hagan `True` gracias solo al segundo paréntesis.
+    3. En la operación 3, ¿qué pasa si `intentos = 3`? ¿Y si el usuario es `"root"` con la clave correcta?
+
 ## 5. Operadores de identidad y de pertenencia
 
 ### Identidad: `is` / `is not`
