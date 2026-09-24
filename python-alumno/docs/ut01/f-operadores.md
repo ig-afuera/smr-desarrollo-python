@@ -288,29 +288,11 @@ precio * 3 + 5 > 20      con precio = 4
 
 Una **sentencia** hace algo (como asignar); una **expresión** calcula un valor. Las expresiones pueden ir en muchos sitios: en una asignación, dentro de `print()`, en una condición...
 
-## 8. Operador *walrus* (`:=`): introducción
-
-Permite **asignar y usar** un valor en la misma expresión. Los paréntesis son obligatorios en la mayoría de los casos:
-
-```pycon
->>> (n := 10) * 2
-20
->>> n
-10
-```
-
-Su uso más habitual es en condiciones, para no calcular algo dos veces:
-
-```python
-texto = input("Escribe algo: ")
-if (largo := len(texto)) > 10:
-    print(f"Texto largo: {largo} caracteres")
-```
 
 !!! note "Nota"
     Es un recurso avanzado: no lo necesitas para nada de lo que veremos, pero te lo encontrarás al leer código de otras personas.
 
-## 9. El módulo `math` en las expresiones
+## 8. El módulo `math` en las expresiones
 
 Para cálculos más allá de las operaciones básicas:
 
