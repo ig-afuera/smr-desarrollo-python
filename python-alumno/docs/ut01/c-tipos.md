@@ -131,8 +131,15 @@ Una **cadena** es una secuencia de caracteres entre comillas. Se estudia a fondo
 'ababab'
 ```
 
+
+### Operaciones con cadenas
+
 - `+` entre dos textos los **une**. `*` con un número **repite** el texto.
 - Una cadena que parece un número (`"25"`) **sigue siendo texto**. Con ella no se puede calcular hasta que la conviertas ([apartado g](g-conversiones.md)).
+
+!!! success "Prueba tu"
+    Prueba a sumar "hola " + "mundo". Cual es el resultado de la operación y porque?
+    Prueba a multiplicar "hola ". *3 Cual es el resultado de la operación y porque?
 
 ## 5. Mutabilidad e inmutabilidad
 
