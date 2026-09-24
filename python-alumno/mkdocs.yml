@@ -52,7 +52,6 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
-  - Cómo se evalúa: evaluacion.md
   - UT01. Elementos de un programa:
       - ut01/index.md
       - "a) Estructura y bloques": ut01/a-estructura.md
