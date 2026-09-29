@@ -306,8 +306,6 @@ Para cálculos más allá de las operaciones básicas:
 -3
 >>> math.ceil(2.1)            # redondea hacia arriba
 3
->>> math.hypot(3, 4)          # hipotenusa
-5.0
 ```
 
 Y algunas funciones predefinidas que no necesitan `import`:
