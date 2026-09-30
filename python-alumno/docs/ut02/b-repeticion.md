@@ -95,6 +95,20 @@ while True:
     print("Has escrito:", texto)
 ```
 
+!!! success "Ahora tú"
+    **Ahorrando para una consola.** Construye un programa que:
+
+    1. Pida el precio de la consola y cuánto dinero puedes ahorrar cada semana.
+    2. Simule el ahorro semana a semana con un `while`, mostrando en cada vuelta:
+
+        ```text
+        Semana 1: llevas 25.00 €
+        Semana 2: llevas 50.00 €
+        ...
+        ```
+
+    3. Al terminar, muestre `¡Ya puedes comprarla! Has tardado X semanas.`
+
 ## 3. Bucle `for`
 
 Recorre **cada elemento** de una secuencia (o de cualquier objeto *iterable*), ejecutando el bloque una vez por elemento.
@@ -119,6 +133,22 @@ for variable in secuencia:
 
 !!! note "Adelanto"
     Con las listas, tuplas y diccionarios de la UT04 el `for` será todavía más útil.
+
+!!! success "Ahora tú"
+    **Analizador de frases.** Construye un programa que pida una frase y, recorriéndola con un `for` letra a letra, cuente:
+
+    - Cuántas **vocales** tiene (incluidas las mayúsculas y las vocales con tilde).
+    - Cuántos **espacios** tiene.
+    - Cuántos **dígitos** tiene.
+
+    ```text
+    Frase: Tengo 2 gatos y 1 perro
+    Vocales: 6
+    Espacios: 5
+    Dígitos: 2
+    ```
+
+    Pista: recuerda el operador `in` de la UT01: `letra in "aeiouáéíóúAEIOUÁÉÍÓÚ"` es `True` si `letra` es una vocal.
 
 ## 4. La función `range()`
 
@@ -159,6 +189,23 @@ for _ in range(3):
 !!! tip "¿`for` o `while`?"
     - Sabes **cuántas veces** repetir (o recorres una secuencia) → `for`.
     - Repites **hasta que ocurra algo** que no sabes cuándo → `while`.
+
+!!! success "Ahora tú"
+    **Tabla de conversión de temperaturas.** Construye un programa que muestre una tabla de grados Celsius a Fahrenheit (`F = C * 9 / 5 + 32`):
+
+    1. Desde **-10 °C hasta 40 °C**, ambos incluidos, **de 5 en 5**.
+    2. Cada fila con este formato, con las columnas alineadas:
+
+        ```text
+          -10 °C =   14.0 °F
+           -5 °C =   23.0 °F
+        ...
+           40 °C =  104.0 °F
+        ```
+
+    3. Después, muestra la misma tabla **al revés** (de 40 a -10) usando un paso negativo.
+
+    Piensa bien el segundo argumento de `range()`: recuerda que el final **no** se incluye.
 
 ## 5. Bucles anidados
 
@@ -203,6 +250,24 @@ for fila in range(1, 4):
 # # # 
 # # # 
 ```
+
+!!! success "Ahora tú"
+    **Tablero de ajedrez.** Construye un programa que pida un tamaño `n` y dibuje un tablero de `n × n` casillas alternando `#` (casilla negra) y `.` (casilla blanca):
+
+    ```text
+    Tamaño: 5
+    # . # . #
+    . # . # .
+    # . # . #
+    . # . # .
+    # . # . #
+    ```
+
+    Usa un `for` para las filas y otro dentro para las columnas.
+    Pista: una casilla es negra cuando `(fila + columna) % 2 == 0`.
+
+    Ampliación: pide también el carácter de las casillas negras y el de las blancas.
+
 
 ## 6. Patrones típicos
 
@@ -268,6 +333,29 @@ while edad < 0 or edad > 120:
 !!! tip "Traza tus bucles a mano"
     Si un bucle no hace lo que esperas, apunta en un papel el valor de cada variable **en cada vuelta**. Es la mejor forma de encontrar el fallo.
     En VS Code puedes hacerlo con el depurador (lo verás en el [apartado d](d-excepciones.md#9-depuracion-basica)).
+
+!!! success "Ahora tú"
+    **Control de gastos del mes.** Construye un programa que pida los gastos del mes uno a uno, hasta que se escriba `0` (centinela), y al final muestre:
+
+    | Dato | Patrón que usas |
+    |---|---|
+    | Número de gastos introducidos | Contador |
+    | Total gastado | Acumulador |
+    | Gasto más alto | Máximo |
+    | Cuántos gastos superan los 50 € | Contador con condición |
+    | Gasto medio | Media (¡cuidado si no hay gastos!) |
+
+    Los gastos negativos no son válidos: avisa y vuelve a pedir el dato (validación).
+
+    ```text
+    Gasto (0 para terminar): 12.5
+    Gasto (0 para terminar): 80
+    Gasto (0 para terminar): -4
+    Gasto no válido
+    Gasto (0 para terminar): 30
+    Gasto (0 para terminar): 0
+    Gastos: 3 | Total: 122.50 € | Mayor: 80.00 € | Más de 50 €: 1 | Media: 40.83 €
+    ```
 
 ## Resumen
 
