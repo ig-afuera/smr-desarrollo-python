@@ -18,18 +18,6 @@ for n in range(50, 101):
 El primero es 56
 ```
 
-Es el complemento perfecto del `while True`: el bucle es «infinito» y se sale cuando ocurre algo.
-
-```python
-while True:
-    clave = input("Contraseña: ")
-    if clave == "python":
-        break
-    print("Incorrecta, inténtalo de nuevo")
-
-print("Acceso concedido")
-```
-
 !!! warning "`break` solo sale del bucle más interno"
     En bucles anidados, `break` termina **únicamente el bucle en el que está**, no todos.
 
