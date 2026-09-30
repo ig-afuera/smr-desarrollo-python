@@ -131,6 +131,67 @@ finally:
 | `except` | Solo si hubo un error del tipo indicado. |
 | `finally` | **Siempre**, haya error o no. Se usa para «limpiar» (cerrar ficheros, conexiones...). |
 
+### ¿Para qué sirve `finally`?
+
+En el ejemplo anterior, el `print("Fin del intento")` daría el mismo resultado escrito **después** del `try`, sin `finally`. Entonces, ¿para qué sirve?
+
+La diferencia aparece cuando el programa **no llega** a la línea siguiente al `try`. `finally` se ejecuta **igualmente** en dos casos en los que el código de después no se ejecuta:
+
+**Caso 1. Se produce un error que ningún `except` captura.**
+
+```python
+try:
+    a = int(input("Dividendo: "))
+    b = int(input("Divisor: "))
+    print("Resultado:", a / b)
+except ValueError:
+    print("Debes escribir números enteros")
+finally:
+    print("Operación terminada")
+
+print("Fin del programa")
+```
+
+Solo se captura `ValueError`. Observa qué pasa con cada entrada:
+
+| Entrada | Salida |
+|---|---|
+| `10` y `2` | `Resultado: 5.0` → `Operación terminada` → `Fin del programa` |
+| `10` y `hola` | `Debes escribir números enteros` → `Operación terminada` → `Fin del programa` |
+| `10` y `0` | `Operación terminada` → **traza de `ZeroDivisionError`** y el programa se detiene |
+
+En el tercer caso, el error no se captura y el programa se detiene. Aun así, **antes de detenerse, Python ejecuta el `finally`**. En cambio, `print("Fin del programa")` no llega a ejecutarse.
+
+![Diagrama de flujo de finally con un error no capturado](img/fd-finally.svg)
+
+**Caso 2. Se sale del bucle con `break` desde dentro del `try`.**
+
+```python
+while True:
+    try:
+        texto = input("Número (fin para salir): ")
+        if texto == "fin":
+            break
+        print("El doble es", int(texto) * 2)
+    except ValueError:
+        print("Eso no es un número")
+    finally:
+        print("--- intento terminado ---")
+```
+
+```text
+Número (fin para salir): 4
+El doble es 8
+--- intento terminado ---
+Número (fin para salir): fin
+--- intento terminado ---
+```
+
+Aunque el `break` saca del bucle, el `finally` se ejecuta **antes de salir**.
+
+!!! tip "¿Cuándo usar `finally`?"
+    Para las tareas de **cierre** que no pueden quedarse sin hacer: cerrar un fichero (lo verás en la UT05), desconectarse de un servidor, guardar un registro o avisar al usuario de que la operación ha terminado.
+
 ## 6. Lanzar excepciones: `raise`
 
 También **tú** puedes provocar una excepción cuando detectes que algo no es válido:
