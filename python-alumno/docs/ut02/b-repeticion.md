@@ -39,6 +39,10 @@ Vuelta 5
 Fin
 ```
 
+En el diagrama de flujo, el bucle se reconoce por la **flecha que vuelve hacia arriba**: tras el cuerpo, se regresa al rombo de la condición. Cuando la condición deja de cumplirse, se sale por el **No**.
+
+![Diagrama de flujo del bucle while](img/fd-while.svg)
+
 Un `while` bien hecho tiene tres piezas:
 
 1. **Inicialización**: `contador = 1`.
@@ -144,6 +148,8 @@ for i in range(1, 11):
     print(f"7 x {i} = {7 * i}")
 ```
 
+![Diagrama de flujo del bucle for](img/fd-for.svg)
+
 ```python
 # Repetir 3 veces (no usamos la variable, se suele llamar _)
 for _ in range(3):
@@ -165,6 +171,10 @@ for tabla in range(1, 4):
         print(f"{tabla} x {i} = {tabla * i}")
     print()      # línea en blanco entre tablas
 ```
+
+En el diagrama se ve un **bucle dentro de otro**, cada uno con su flecha de vuelta. El `print()` está dentro del bucle externo pero fuera del interno: se ejecuta una vez por cada tabla.
+
+![Diagrama de flujo de bucles anidados](img/fd-for-anidado.svg)
 
 ```python
 # Triángulo de asteriscos

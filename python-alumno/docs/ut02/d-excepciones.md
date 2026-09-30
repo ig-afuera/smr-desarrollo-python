@@ -73,6 +73,12 @@ Funcionamiento:
 3. Si **hay un error** del tipo indicado, se abandona el `try` en ese punto y se ejecuta el `except`.
 4. El programa **continúa** después.
 
+Los diagramas de flujo no tienen un símbolo propio para las excepciones. Se dibujan como una **decisión**: «¿ha fallado la instrucción?».
+
+![Diagrama de flujo de try / except](img/fd-try-except.svg)
+
+Si `int()` falla, el resto del `try` **no se ejecuta**: se va directamente al `except`. Si no falla, el `except` se ignora.
+
 ### Varios `except`
 
 Cada tipo de error puede tener su propio tratamiento:
@@ -124,6 +130,8 @@ except ValueError:
 finally:
     print("Fin del intento")            # SIEMPRE se ejecuta
 ```
+
+![Diagrama de flujo de try / except / finally](img/fd-try-finally.svg)
 
 | Cláusula | Se ejecuta... |
 |---|---|
@@ -205,6 +213,10 @@ if edad < 0:
 print("Edad válida:", edad)
 ```
 
+`raise` corta el flujo: si se ejecuta, el programa **termina con un error** (si nadie lo captura) y no llega a `print("Edad válida:", edad)`.
+
+![Diagrama de flujo de raise](img/fd-raise.svg)
+
 Se usa para avisar de una situación incorrecta, y otra parte del programa puede capturarla con `try` / `except`:
 
 ```python
@@ -239,6 +251,8 @@ Cómo funciona:
 - `while True` repite la pregunta indefinidamente.
 - Si `int()` falla, o si la edad es negativa, salta el `except` y el bucle **vuelve a preguntar**.
 - Si todo va bien, se ejecuta `break` y se sale.
+
+![Diagrama de flujo del patrón de validación](img/fd-validacion.svg)
 
 !!! tip "Guarda este patrón"
     Se repite en casi todos los programas: menús, cajeros, formularios... En el proyecto de clase lo necesitarás seguro.

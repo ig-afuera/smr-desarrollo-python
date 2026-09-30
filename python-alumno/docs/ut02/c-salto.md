@@ -18,6 +18,10 @@ for n in range(50, 101):
 El primero es 56
 ```
 
+En el diagrama de flujo, la flecha del `break` **sale del bucle** y se une al camino de salida, aunque queden valores por recorrer.
+
+![Diagrama de flujo de break en un bucle for](img/fd-break.svg)
+
 !!! warning "`break` solo sale del bucle más interno"
     En bucles anidados, `break` termina **únicamente el bucle en el que está**, no todos.
 
@@ -40,6 +44,10 @@ for n in range(1, 11):
 7
 9
 ```
+
+Cuando se llega al `continue`, el resto del cuerpo (`print(n)`) se salta y la flecha vuelve al inicio del bucle, con el siguiente valor:
+
+![Diagrama de flujo de continue](img/fd-continue.svg)
 
 Con `while` hay que tener cuidado de actualizar el contador **antes** del `continue`, o el bucle se quedará atascado:
 
