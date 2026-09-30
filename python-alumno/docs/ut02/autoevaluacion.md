@@ -64,10 +64,10 @@ for n in range(1, 8):
     - Con `n = 7`, no es par, pero `7 > 5` → se ejecuta `break` y el bucle termina sin imprimirlo.
 
 ### Pregunta 7
-¿Cuándo se ejecuta el `else` de un bucle `for`?
+Para **sumar** valores en un bucle, el acumulador empieza en `0`. ¿En qué valor debe empezar si quieres **multiplicarlos**? ¿Por qué?
 
 ??? success "Solución"
-    Cuando el bucle **termina de forma natural, sin haber ejecutado ningún `break`**. Si se sale con `break`, el `else` no se ejecuta.
+    En `1`. El valor inicial no debe alterar el resultado: sumar `0` no cambia una suma y multiplicar por `1` no cambia un producto. Si empezara en `0`, el producto daría siempre `0`.
 
 ### Pregunta 8
 ¿Qué muestra este código?
@@ -212,14 +212,14 @@ Pide un número entero y di si es primo. Recuerda que los menores que 2 no lo so
     if n < 2:
         print("No es primo")
     else:
+        es_primo = True
         for i in range(2, n):
             if n % i == 0:
-                print("No es primo")
+                es_primo = False
                 break
-        else:
-            print("Es primo")
+        print("Es primo" if es_primo else "No es primo")
     ```
-    El `else` del `for` solo se ejecuta si no se encontró ningún divisor (no hubo `break`).
+    La variable `es_primo` hace de bandera: empieza en `True` y pasa a `False` en cuanto aparece un divisor.
 
 ### Ejercicio 7. Adivina el número
 El programa tiene un número secreto (constante `SECRETO = 42`). El usuario tiene **5 intentos**. Tras cada fallo, indica si el número secreto es mayor o menor. Si lo adivina, se felicita y termina; si agota los intentos, se revela el número.

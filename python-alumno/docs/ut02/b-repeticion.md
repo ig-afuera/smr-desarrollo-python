@@ -194,29 +194,7 @@ for fila in range(1, 4):
 # # # 
 ```
 
-## 6. Cláusula `else` en bucles
-
-El `else` de un bucle se ejecuta **si el bucle termina de forma natural**, es decir, **sin haber pasado por un `break`**.
-
-**Ejemplo: ¿es primo?** Un número mayor que 1 es primo si no es divisible por ningún número entre 2 y él mismo (sin incluirlo).
-
-```python
-n = 29
-
-for i in range(2, n):
-    if n % i == 0:
-        print(n, "no es primo")
-        break
-else:
-    print(n, "es primo")
-```
-
-Si aparece un divisor, se muestra el mensaje y `break` sale **sin** ejecutar el `else`. Si el bucle acaba sin encontrar ninguno, se ejecuta el `else`.
-
-!!! note "Sobre este ejemplo"
-    Vale para `n >= 2`. Con 0 o 1 habría que tratarlos aparte, porque no son primos y el bucle no se ejecutaría.
-
-## 7. Patrones típicos
+## 6. Patrones típicos
 
 Casi todos los problemas con bucles usan uno de estos esquemas.
 
@@ -286,5 +264,4 @@ while edad < 0 or edad > 120:
 - `while` repite **mientras** se cumpla una condición; necesita inicialización, condición y actualización.
 - `for` recorre una secuencia; con `range(inicio, fin, paso)` repites un número exacto de veces (el `fin` **no** se incluye).
 - Los bucles se pueden **anidar**.
-- El `else` de un bucle se ejecuta si **no** hubo `break`.
 - Patrones: contador, acumulador, máximo/mínimo, media, centinela y validación de entradas.
