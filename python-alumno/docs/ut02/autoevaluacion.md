@@ -82,10 +82,10 @@ print(i)
     Muestra `-2`. Los valores de `i` son 10 → 7 → 4 → 1 → -2. Cuando `i` vale `-2`, la condición `i > 0` es falsa y el bucle termina.
 
 ### Pregunta 9
-En un `try` / `except` / `else` / `finally`, ¿qué bloque se ejecuta **siempre**? ¿Y cuándo se ejecuta el `else`?
+En un `try` / `except` / `finally`, ¿qué bloque se ejecuta **siempre**? ¿Se ejecuta el `finally` si se produce un error que ningún `except` captura?
 
 ??? success "Solución"
-    `finally` se ejecuta siempre. El `else` se ejecuta **solo si el bloque `try` terminó sin lanzar ninguna excepción**.
+    `finally` se ejecuta siempre. Sí: aunque el error no se capture, el `finally` se ejecuta **antes** de que el programa se detenga y muestre la traza.
 
 ### Pregunta 10
 ¿Qué diferencia hay entre un error de sintaxis, una excepción y un error lógico?
@@ -251,12 +251,11 @@ Pide un número entero entre 1 y 10. Si el usuario escribe algo que no es un ent
     while True:
         try:
             numero = int(input("Número del 1 al 10: "))
-        except ValueError:
-            print("Debes escribir un número entero")
-        else:
             if 1 <= numero <= 10:
                 break
             print("Fuera de rango")
+        except ValueError:
+            print("Debes escribir un número entero")
 
     print("Has elegido el", numero)
     ```

@@ -111,15 +111,16 @@ except ValueError as error:
     Evita el `except:` a secas (o `except Exception:`) como norma: captura **cualquier** error, incluso los que no esperabas, y esconde fallos reales.
     Indica siempre el tipo (`except ValueError:`).
 
-## 5. Cláusulas `else` y `finally`
+## 5. Cláusula `finally`
+
+Después de los `except` se puede añadir un bloque `finally`, que se ejecuta **siempre**, haya error o no:
 
 ```python
 try:
     numero = int(input("Número: "))
+    print("Has escrito", numero)
 except ValueError:
     print("No es un número")
-else:
-    print("Has escrito", numero)       # solo si NO hubo error
 finally:
     print("Fin del intento")            # SIEMPRE se ejecuta
 ```
@@ -128,7 +129,6 @@ finally:
 |---|---|
 | `try` | Siempre, hasta que ocurra un error. |
 | `except` | Solo si hubo un error del tipo indicado. |
-| `else` | Solo si el `try` terminó **sin errores**. |
 | `finally` | **Siempre**, haya error o no. Se usa para «limpiar» (cerrar ficheros, conexiones...). |
 
 ## 6. Lanzar excepciones: `raise`
@@ -178,20 +178,6 @@ Cómo funciona:
 - `while True` repite la pregunta indefinidamente.
 - Si `int()` falla, o si la edad es negativa, salta el `except` y el bucle **vuelve a preguntar**.
 - Si todo va bien, se ejecuta `break` y se sale.
-
-Versión con `else` (más limpia):
-
-```python
-while True:
-    try:
-        edad = int(input("Edad: "))
-    except ValueError:
-        print("Escribe un número entero")
-    else:
-        if edad >= 0:
-            break
-        print("La edad no puede ser negativa")
-```
 
 !!! tip "Guarda este patrón"
     Se repite en casi todos los programas: menús, cajeros, formularios... En el proyecto de clase lo necesitarás seguro.
@@ -255,7 +241,7 @@ El panel **Variables** (a la izquierda) muestra los valores actuales. Con él pu
 
 - Una **excepción** detiene el programa y muestra una **traza**: lee la última línea primero.
 - Errores de **sintaxis**, de **ejecución** (excepciones) y **lógicos**.
-- `try` / `except` captura errores concretos; `else` se ejecuta si no hubo error; `finally` siempre.
+- `try` / `except` captura errores concretos; `finally` se ejecuta siempre, incluso si el error no se captura o se sale con `break`.
 - `raise` lanza una excepción.
 - Patrón de validación: `while True` + `try` / `except` + `break`.
 - Depura con la traza, `print()` y el depurador de VS Code.
