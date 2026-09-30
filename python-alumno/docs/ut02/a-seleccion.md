@@ -1,6 +1,6 @@
 # a) Estructuras de selección
 
-## 1. Flujo de control
+## 1. Flujo de control y diagramas de flujo
 
 El **flujo de control** es el orden en que se ejecutan las instrucciones. Puede ser:
 
@@ -8,29 +8,28 @@ El **flujo de control** es el orden en que se ejecutan las instrucciones. Puede 
 - **Selección**: se ejecuta un bloque **u otro** según una condición.
 - **Repetición**: un bloque se ejecuta **varias veces** (apartado b).
 
-Antes de programar, conviene dibujar el flujo. Un **diagrama de flujo** usa rombos para las decisiones:
+### Diagramas de flujo
 
-```text
-        ┌───────────┐
-        │  INICIO   │
-        └─────┬─────┘
-              ▼
-      ┌───────────────┐
-      │ leer edad     │
-      └───────┬───────┘
-              ▼
-        ◇ ¿edad ≥ 18? ◇
-       sí │           │ no
-          ▼           ▼
- ┌───────────────┐ ┌───────────────┐
- │ "Eres mayor"  │ │ "Eres menor"  │
- └───────┬───────┘ └───────┬───────┘
-         └────────┬────────┘
-                  ▼
-            ┌───────────┐
-            │    FIN    │
-            └───────────┘
-```
+Para **ver** el flujo de cada estructura usaremos en toda la unidad **diagramas de flujo**. El programa se dibuja con unas pocas figuras unidas por **flechas**, que indican qué instrucción va después de cuál:
+
+![Símbolos de un diagrama de flujo](img/fd-simbolos.svg)
+
+| Símbolo | Forma | Qué representa |
+|---|---|---|
+| **Inicio / Fin** | Óvalo | Dónde empieza y dónde termina el programa. |
+| **Proceso** | Rectángulo | Un cálculo o una asignación: `total = a + b`. |
+| **Entrada / Salida** | Paralelogramo | Pedir datos (`input`) o mostrarlos (`print`). |
+| **Decisión** | Rombo | Una condición. Salen dos flechas: **Sí** y **No**. |
+| **Bucle `for`** | Hexágono | Recorrer una secuencia: se repite mientras queden valores. |
+| **Flujo** | Flecha | El camino que sigue la ejecución. |
+
+!!! note "Solo para leer el flujo"
+    No tienes que memorizar los símbolos ni dibujarlos a la perfección: los usamos para **entender en qué orden se ejecuta cada instrucción**.
+    Para seguir un diagrama, pon el dedo en **Inicio** y ve siguiendo las flechas hasta **Fin**.
+
+Por ejemplo, un programa que dice si eres mayor o menor de edad:
+
+![Diagrama de flujo: mayor o menor de edad](img/fd-edad.svg)
 
 ## 2. Condicional simple: `if`
 
