@@ -156,21 +156,7 @@ except ValueError as error:
     print("Error:", error)
 ```
 
-## 7. Aserciones: `assert`
-
-`assert condición, "mensaje"` comprueba que algo que **debería ser siempre cierto** lo es. Si no, lanza un `AssertionError`.
-
-```python
-total = 100
-descuento = 20
-assert descuento <= total, "El descuento no puede superar el total"
-```
-
-!!! note "`assert` ≠ validar al usuario"
-    Sirve para **detectar errores del programador** durante el desarrollo (comprobar que tus cálculos son coherentes).
-    Para validar lo que **teclea el usuario**, usa `if` o `try` / `except`.
-
-## 8. Validación de entradas con excepciones
+## 7. Validación de entradas con excepciones
 
 Es el patrón más útil de esta unidad: **pedir un dato hasta que sea válido**.
 
@@ -210,7 +196,7 @@ while True:
 !!! tip "Guarda este patrón"
     Se repite en casi todos los programas: menús, cajeros, formularios... En el proyecto de clase lo necesitarás seguro.
 
-## 9. Excepciones personalizadas: introducción
+## 8. Excepciones personalizadas: introducción
 
 Puedes crear tus propios tipos de excepción **heredando** de `Exception`. Es una «receta» que entenderás del todo en la UT06:
 
@@ -231,7 +217,7 @@ except SaldoInsuficienteError as error:
 
 Un nombre propio hace que el error sea más descriptivo y fácil de capturar por separado.
 
-## 10. Depuración básica
+## 9. Depuración básica
 
 Depurar es **encontrar y corregir errores**. Tres herramientas:
 
@@ -270,6 +256,6 @@ El panel **Variables** (a la izquierda) muestra los valores actuales. Con él pu
 - Una **excepción** detiene el programa y muestra una **traza**: lee la última línea primero.
 - Errores de **sintaxis**, de **ejecución** (excepciones) y **lógicos**.
 - `try` / `except` captura errores concretos; `else` se ejecuta si no hubo error; `finally` siempre.
-- `raise` lanza una excepción; `assert` comprueba supuestos del programador.
+- `raise` lanza una excepción.
 - Patrón de validación: `while True` + `try` / `except` + `break`.
 - Depura con la traza, `print()` y el depurador de VS Code.
