@@ -61,6 +61,16 @@ if condición:
 !!! note "Se puede usar cualquier valor como condición"
     Recuerda los valores *truthy* y *falsy* de la UT01: `if nombre:` es `True` si `nombre` no está vacío.
 
+!!! success "Ahora tú"
+    **Aviso de batería baja.** Construye un programa que:
+
+    1. Pida al usuario el porcentaje de batería de su móvil (un número entero).
+    2. **Solo si** la batería es del 20 % o menos, muestre `¡Batería baja! Conecta el cargador.`
+    3. **Solo si** la batería es del 5 % o menos, muestre además `El móvil se apagará pronto.`
+    4. Siempre, al final, muestre `Batería actual: X %`.
+
+    Pruébalo con `50`, `15` y `3`. ¿Cuántos mensajes aparecen en cada caso? Usa solo `if`, sin `else`.
+
 ## 3. Condicional doble: `if ... else`
 
 Elige entre **dos caminos**: uno si la condición es verdadera y otro si es falsa.
@@ -77,6 +87,25 @@ else:
 ![Diagrama de flujo del condicional doble](img/fd-if-else.svg)
 
 Con `if ... else` **siempre se ejecuta exactamente uno de los dos bloques**: ahora las dos flechas pasan por una instrucción antes de volver a juntarse.
+
+!!! success "Ahora tú"
+    **Cara o cruz contra el ordenador.** Construye un programa que:
+
+    1. Haga que el ordenador lance una moneda al azar: `"cara"` o `"cruz"`.
+    2. Pida al usuario su apuesta (`cara` o `cruz`).
+    3. Si acierta, muestre `¡Has ganado! Salió cara` (con lo que haya salido); si no, `Has perdido. Salió cruz`.
+
+    Ejecútalo varias veces: el resultado debe cambiar de una vez a otra.
+
+    !!! info "Librería necesaria: `random`"
+        Para que el ordenador elija al azar necesitas el módulo **`random`**, que genera valores aleatorios.
+        Viene incluido con Python (no hay que instalar nada): basta con **importarlo** al principio del programa.
+
+        ```python
+        import random
+
+        moneda = random.choice(["cara", "cruz"])   # elige uno de los valores al azar
+        ```
 
 ## 4. Condicional múltiple: `if ... elif ... else`
 
@@ -104,6 +133,32 @@ En el diagrama de flujo, cada `elif` es un **nuevo rombo en el camino del No** d
 !!! warning "El orden importa"
     Si pusieras `nota >= 5` la primera, un 9,5 mostraría «Suficiente», porque esa condición ya se cumple y Python no sigue mirando.
     Ordena las condiciones de la **más restrictiva a la más general**.
+
+!!! success "Ahora tú"
+    **Saludo según la hora.** Construye un programa que salude según la hora **real** del ordenador:
+
+    | Hora | Saludo |
+    |---|---|
+    | De 6 a 13 | `Buenos días` |
+    | De 14 a 20 | `Buenas tardes` |
+    | De 21 a 23 | `Buenas noches` |
+    | De 0 a 5 | `¿Todavía sin dormir?` |
+
+    Al final muestra también la hora, por ejemplo: `Son las 17 h`.
+
+    Para comprobar todos los casos sin esperar al reloj, cambia temporalmente la línea de la hora por un valor fijo (`hora = 3`, `hora = 22`...).
+
+    !!! info "Librería necesaria: `datetime`"
+        El módulo **`datetime`** sirve para trabajar con fechas y horas. También viene incluido con Python.
+        De él importamos `datetime`, que tiene `now()` para obtener la fecha y hora actuales:
+
+        ```python
+        from datetime import datetime
+
+        ahora = datetime.now()
+        hora = ahora.hour        # hora actual (0-23)
+        minuto = ahora.minute    # minuto actual (0-59)
+        ```
 
 ## 5. Condiciones compuestas y anidamiento
 
@@ -138,6 +193,18 @@ else:
     print("No bisiesto")
 ```
 
+!!! success "Ahora tú"
+    **Descuento en la tienda de informática.** Construye un programa que calcule el precio final de una compra:
+
+    1. Pide el importe de la compra, si el cliente es socio (`s`/`n`) y si ha pagado con tarjeta (`s`/`n`).
+    2. Se aplica un **10 % de descuento** si se cumple **alguna** de estas situaciones:
+        - Es socio **y** la compra es de 50 € o más.
+        - La compra supera los 200 €, sea socio o no.
+    3. Haya descuento o no, si paga con tarjeta **y no** es socio, se suma un recargo fijo de 1 €.
+    4. Muestra el precio final con 2 decimales.
+
+    Escribe cada regla en **un solo `if`** combinando `and`, `or` y `not`. Prueba al menos: socio con 60 €, no socio con 60 €, no socio con 250 € pagando con tarjeta.
+
 ### Condicionales anidados
 
 Un `if` dentro de otro `if`:
@@ -169,6 +236,18 @@ En el diagrama de flujo el anidamiento se ve claramente: un rombo **dentro** del
         print("Datos incorrectos")
     ```
 
+!!! success "Ahora tú"
+    **Acceso a la montaña rusa.** Construye un programa para la taquilla de una atracción:
+
+    1. Pide la altura de la persona en centímetros.
+    2. Si mide **menos de 120 cm**, muestra `No alcanzas la altura mínima` y no preguntes nada más.
+    3. Si mide 120 cm o más, **entonces** pide la edad:
+        - Menos de 12 años: `Puedes subir, pero acompañado de un adulto`.
+        - 12 años o más: `Puedes subir solo`.
+    4. Solo a quienes pueden subir, pregunta si tienen la pulsera VIP (`s`/`n`) y, si la tienen, muestra `Pasa por la fila rápida`.
+
+    Tiene que haber al menos **dos niveles de anidamiento**. Dibuja primero su diagrama de flujo en papel y luego escribe el código.
+
 ## 6. Expresión condicional (operador ternario)
 
 Una forma abreviada de elegir **un valor** según una condición, en una sola línea:
@@ -191,6 +270,29 @@ Su flujo es el de un `if ... else`, pero cada camino solo **produce un valor**:
 ![Diagrama de flujo de la expresión condicional](img/fd-ternario.svg)
 
 Úsala para asignaciones sencillas. Si la lógica es más compleja, un `if` normal se lee mejor.
+
+!!! success "Ahora tú"
+    **Bandeja de entrada.** Construye un programa que pida cuántos correos nuevos hay y muestre un resumen **bien escrito**, usando **solo expresiones condicionales** (ningún `if` normal):
+
+    ```text
+    Correos nuevos: 1
+    Tienes 1 correo nuevo
+    Estado de la bandeja: con correo
+    ```
+
+    ```text
+    Correos nuevos: 4
+    Tienes 4 correos nuevos
+    Estado de la bandeja: con correo
+    ```
+
+    ```text
+    Correos nuevos: 0
+    Tienes 0 correos nuevos
+    Estado de la bandeja: vacía
+    ```
+
+    Pista: calcula en variables aparte la palabra `correo`/`correos`, `nuevo`/`nuevos` y el estado, y únelas en un f-string.
 
 ## 7. Selección múltiple: `match ... case`
 
@@ -232,6 +334,22 @@ match dia:
 
 !!! warning "Versión de Python"
     `match` no funciona en versiones anteriores a la 3.10 (daría `SyntaxError`). Comprueba la tuya con `python --version`.
+
+!!! success "Ahora tú"
+    **Mini-terminal.** Construye un programa que imite una terminal muy sencilla. Pide un comando al usuario y responde con `match`:
+
+    | Comando | Respuesta |
+    |---|---|
+    | `ls` o `dir` | `documentos  fotos  musica` |
+    | `whoami` | El nombre de usuario, que habrás guardado antes en una constante |
+    | `hora` | La hora actual con formato `HH:MM` (por ejemplo, `09:05`) |
+    | `cls` o `clear` | Imprime 30 líneas en blanco (pista: `print("\n" * 30)`) |
+    | `exit` o `salir` | `Cerrando sesión...` |
+    | Cualquier otro | `'xyz' no se reconoce como un comando` (con lo que haya escrito) |
+
+    Agrupa con `|` los comandos que hacen lo mismo y no olvides el comodín `_`.
+
+    Para la hora usa el módulo **`datetime`** que viste en el condicional múltiple (`datetime.now().hour` y `datetime.now().minute`). Recuerda el formato `:02d` de la UT01 para que salga `09` en lugar de `9`.
 
 ## 8. Errores comunes
 
