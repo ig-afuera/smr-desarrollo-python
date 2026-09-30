@@ -52,6 +52,13 @@ Traceback (most recent call last):
 IndexError: string index out of range
 ```
 
+!!! success "Ahora tú"
+    **Colección de errores.** Construye un programa `errores.py` que tenga **una línea que provoque cada una** de estas excepciones: `ValueError`, `TypeError`, `ZeroDivisionError`, `NameError` e `IndexError`.
+
+    1. Escribe todas las líneas comentadas con `#`.
+    2. Quita el comentario de **una sola**, ejecuta y apunta en un comentario, al lado de esa línea, la **última línea de la traza**.
+    3. Vuelve a comentarla y repite con la siguiente.
+
 ## 4. `try` ... `except`
 
 Permite **intentar** un código y **decidir qué hacer si falla**, en lugar de que el programa se detenga.
@@ -116,6 +123,22 @@ except ValueError as error:
 !!! warning "Captura errores concretos"
     Evita el `except:` a secas (o `except Exception:`) como norma: captura **cualquier** error, incluso los que no esperabas, y esconde fallos reales.
     Indica siempre el tipo (`except ValueError:`).
+
+!!! success "Ahora tú"
+    **Deletreador seguro.** Construye un programa que pida una palabra y una posición, y muestre la letra que hay en esa posición:
+
+    ```text
+    Palabra: teclado
+    Posición: 2
+    En la posición 2 está la letra 'c'
+    ```
+
+    El programa **nunca debe detenerse con una traza**. Trata por separado:
+
+    - Que la posición no sea un número entero → `La posición debe ser un número entero`.
+    - Que la posición no exista en la palabra → `La palabra solo tiene X letras`.
+
+    Pista: provoca antes los dos errores a propósito para saber **qué excepción** lanza cada uno.
 
 ## 5. Cláusula `finally`
 
@@ -200,6 +223,22 @@ Aunque el `break` saca del bucle, el `finally` se ejecuta **antes de salir**.
 !!! tip "¿Cuándo usar `finally`?"
     Para las tareas de **cierre** que no pueden quedarse sin hacer: cerrar un fichero (lo verás en la UT05), desconectarse de un servidor, guardar un registro o avisar al usuario de que la operación ha terminado.
 
+!!! success "Ahora tú"
+    **Terminal de pedidos de una cafetería.** Un café cuesta 1,40 €. Construye un programa que:
+
+    1. En el `try`, pida cuántos cafés quiere el cliente.
+    2. En el `except`, avise si no ha escrito un número entero.
+    3. También en el `try`, muestre el total a pagar con 2 decimales.
+    4. En el `finally`, muestre siempre `Gracias por su visita`.
+
+    Ejecútalo dos veces: una con `3` y otra con `tres`. Compara qué bloques se ejecutan en cada caso.
+
+    **Segunda parte: la utilidad del `finally`.**
+
+    1. Dentro del `try`, pide también entre cuántas personas se reparte la cuenta y muestra lo que paga cada una. **No** captures `ZeroDivisionError`.
+    2. Añade después de todo el bloque `try` un `print("Programa terminado")`.
+    3. Ejecútalo con `3` cafés y `0` personas. ¿Qué mensajes llegan a mostrarse y cuáles no? Explica por qué.
+
 ## 6. Lanzar excepciones: `raise`
 
 También **tú** puedes provocar una excepción cuando detectes que algo no es válido:
@@ -229,6 +268,17 @@ except ValueError as error:
     print("Error:", error)
 ```
 
+!!! success "Ahora tú"
+    **Comprobador de contraseñas.** Construye un programa que pida un nombre de usuario y una contraseña, y **lance** un `ValueError` con un mensaje distinto en cada uno de estos casos:
+
+    - La contraseña tiene menos de 8 caracteres → `La contraseña debe tener al menos 8 caracteres`.
+    - La contraseña es igual que el nombre de usuario → `La contraseña no puede ser tu nombre de usuario`.
+    - La contraseña está formada solo por números → `La contraseña no puede ser solo números`.
+
+    Captura la excepción con `try` / `except ... as error` y muestra `Contraseña rechazada: ` seguido del mensaje. Si no hay ningún problema, muestra `Contraseña aceptada`.
+
+    Pista: `texto.isdigit()` devuelve `True` si todos los caracteres de `texto` son cifras.
+
 ## 7. Validación de entradas con excepciones
 
 Es el patrón más útil de esta unidad: **pedir un dato hasta que sea válido**.
@@ -257,6 +307,23 @@ Cómo funciona:
 !!! tip "Guarda este patrón"
     Se repite en casi todos los programas: menús, cajeros, formularios... En el proyecto de clase lo necesitarás seguro.
 
+!!! success "Ahora tú"
+    **Cita en el taller.** Construye un programa que pida los datos de una cita, **validando cada uno** con el patrón `while True` + `try` / `except` + `break`:
+
+    | Dato | Valores válidos |
+    |---|---|
+    | Día | Entero del 1 al 31 |
+    | Mes | Entero del 1 al 12 |
+    | Hora | Entero del 9 al 18 (horario del taller) |
+
+    Cada dato se vuelve a pedir hasta que sea correcto, con un mensaje que explique el error. Al final muestra:
+
+    ```text
+    Cita confirmada: 07/03 a las 10:00
+    ```
+
+    Fíjate en que el mismo patrón se repite tres veces: en la UT03 aprenderás a escribirlo una sola vez con una **función**.
+
 ## 8. Excepciones personalizadas: introducción
 
 Puedes crear tus propios tipos de excepción **heredando** de `Exception`. Es una «receta» que entenderás del todo en la UT06:
@@ -277,6 +344,14 @@ except SaldoInsuficienteError as error:
 ```
 
 Un nombre propio hace que el error sea más descriptivo y fácil de capturar por separado.
+
+!!! success "Ahora tú"
+    **Control del ascensor.** Un ascensor admite como máximo 6 personas y 450 kg. Construye un programa que:
+
+    1. Defina dos excepciones propias: `DemasiadasPersonasError` y `PesoExcesivoError`.
+    2. Pida cuántas personas suben y el peso de cada una (con un `for`), sumando el peso total.
+    3. Lance la excepción adecuada si se supera alguno de los límites, con un mensaje como `Sobran 2 personas` o `Sobran 35.5 kg`.
+    4. Capture cada una por separado y muestre el aviso. Si todo va bien, muestre `Puertas cerrándose...`.
 
 ## 9. Depuración básica
 
@@ -311,6 +386,21 @@ El panel **Variables** (a la izquierda) muestra los valores actuales. Con él pu
 
 !!! info "En Jupyter"
     Las celdas también se pueden depurar con el botón **Depurar celda** de VS Code. Si no, ejecuta las celdas de una en una e inspecciona las variables escribiendo su nombre en la celda siguiente.
+
+!!! success "Ahora tú"
+    **Interés compuesto paso a paso.** Construye un programa que pida un capital inicial, un interés anual (en %) y un número de años, y muestre el capital al final de cada año (cada año se suma el interés sobre el capital acumulado).
+
+    ```text
+    Año 1: 1030.00 €
+    Año 2: 1060.90 €
+    Año 3: 1092.73 €
+    ```
+
+    Después, **depúralo** con VS Code:
+
+    1. Pon un punto de interrupción en la línea que actualiza el capital.
+    2. Ejecuta con `F5` y avanza con `F10`, observando en el panel **Variables** cómo cambian el año y el capital.
+    3. Introduce a propósito un error lógico (por ejemplo, calcular el interés siempre sobre el capital inicial) y localízalo usando el depurador.
 
 ## Resumen
 
