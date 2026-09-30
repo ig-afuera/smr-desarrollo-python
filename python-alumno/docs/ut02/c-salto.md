@@ -52,22 +52,7 @@ while i < 10:
     print(i)
 ```
 
-## 3. `pass`: bloque vacío
-
-`pass` **no hace nada**. Sirve cuando la sintaxis exige un bloque pero todavía no sabes qué poner (un «marcador de posición»):
-
-```python
-edad = int(input("Edad: "))
-
-if edad >= 18:
-    pass        # TODO: aquí irá la lógica para mayores de edad
-else:
-    print("Eres menor de edad")
-```
-
-Sin `pass`, un bloque vacío da `IndentationError`.
-
-## 4. Uso adecuado de las sentencias de salto
+## 3. Uso adecuado de las sentencias de salto
 
 `break` y `continue` son útiles, pero abusar de ellos complica seguir el flujo del programa.
 
