@@ -204,19 +204,6 @@ match dia:
         print("Día no válido")
 ```
 
-- Se puede añadir una **guarda** (`if`) para condiciones extra:
-
-```python
-numero = int(input("Número: "))
-
-match numero:
-    case 0:
-        print("Cero")
-    case n if n > 0:
-        print("Positivo")
-    case _:
-        print("Negativo")
-```
 
 !!! warning "Versión de Python"
     `match` no funciona en versiones anteriores a la 3.10 (daría `SyntaxError`). Comprueba la tuya con `python --version`.
