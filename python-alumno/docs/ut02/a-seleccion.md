@@ -45,6 +45,10 @@ if temperatura > 30:
 print("Fin del programa")
 ```
 
+![Diagrama de flujo del condicional simple](img/fd-if.svg)
+
+La flecha del **No** no pasa por ninguna instrucción: si la condición es falsa, se va directamente a `print("Fin del programa")`.
+
 ```text
 if condición:
     bloque      ← se ejecuta solo si la condición es True
@@ -70,7 +74,9 @@ else:
     print("Es impar")
 ```
 
-Con `if ... else` **siempre se ejecuta exactamente uno de los dos bloques**.
+![Diagrama de flujo del condicional doble](img/fd-if-else.svg)
+
+Con `if ... else` **siempre se ejecuta exactamente uno de los dos bloques**: ahora las dos flechas pasan por una instrucción antes de volver a juntarse.
 
 ## 4. Condicional múltiple: `if ... elif ... else`
 
@@ -91,6 +97,10 @@ else:
     print("Insuficiente")
 ```
 
+En el diagrama de flujo, cada `elif` es un **nuevo rombo en el camino del No** del anterior. Así se ve que, en cuanto una condición se cumple, las de más abajo ya no se miran:
+
+![Diagrama de flujo del condicional múltiple](img/fd-if-elif.svg)
+
 !!! warning "El orden importa"
     Si pusieras `nota >= 5` la primera, un 9,5 mostraría «Suficiente», porque esa condición ya se cumple y Python no sigue mirando.
     Ordena las condiciones de la **más restrictiva a la más general**.
@@ -110,6 +120,10 @@ if edad >= 18 and tiene_carnet:
 else:
     print("No puedes conducir")
 ```
+
+![Diagrama de flujo de una condición compuesta](img/fd-compuesta.svg)
+
+La forma del diagrama es la de un `if ... else` normal: toda la condición compuesta se evalúa **de una vez** y da un único `True` o `False`.
 
 Para rangos, la comparación encadenada es muy legible: `if 1 <= mes <= 12:`.
 
@@ -141,6 +155,10 @@ else:
     print("Usuario desconocido")
 ```
 
+En el diagrama de flujo el anidamiento se ve claramente: un rombo **dentro** del camino del Sí de otro.
+
+![Diagrama de flujo de un condicional anidado](img/fd-anidado.svg)
+
 !!! tip "Evita anidar de más"
     Muchos niveles de anidamiento dificultan la lectura. Si puedes, usa `and` o `elif` para aplanar el código:
 
@@ -168,6 +186,10 @@ valor_si_verdadero  if  condición  else  valor_si_falso
 Impar
 ```
 
+Su flujo es el de un `if ... else`, pero cada camino solo **produce un valor**:
+
+![Diagrama de flujo de la expresión condicional](img/fd-ternario.svg)
+
 Úsala para asignaciones sencillas. Si la lógica es más compleja, un `if` normal se lee mejor.
 
 ## 7. Selección múltiple: `match ... case`
@@ -187,6 +209,10 @@ match opcion:
     case _:
         print("Opción no válida")
 ```
+
+![Diagrama de flujo de la selección múltiple con match](img/fd-match.svg)
+
+Su flujo es igual que el de una cadena de `elif`: se compara `opcion` con cada caso, de arriba abajo, y se ejecuta **solo el primero** que coincide. Si ninguno coincide, se llega a `case _`, que recoge todo lo demás.
 
 - `case _:` es el **comodín**: se ejecuta si ningún otro caso coincide (como el `else`).
 - Se pueden agrupar varios valores con `|` (o):
