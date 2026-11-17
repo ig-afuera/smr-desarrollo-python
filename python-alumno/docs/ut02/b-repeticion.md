@@ -332,7 +332,7 @@ while edad < 0 or edad > 120:
 
 !!! tip "Traza tus bucles a mano"
     Si un bucle no hace lo que esperas, apunta en un papel el valor de cada variable **en cada vuelta**. Es la mejor forma de encontrar el fallo.
-    En VS Code puedes hacerlo con el depurador (lo verás en el [apartado d](d-excepciones.md#9-depuracion-basica)).
+    En VS Code puedes hacerlo con el depurador (lo verás en el [apartado d](d-excepciones.md#10-depuracion-basica)).
 
 !!! success "Ahora tú"
     **Control de gastos del mes.** Construye un programa que pida los gastos del mes uno a uno, hasta que se escriba `0` (centinela), y al final muestre:
