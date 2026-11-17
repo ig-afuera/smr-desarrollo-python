@@ -71,3 +71,9 @@ nav:
       - "d) Excepciones": ut02/d-excepciones.md
       - Ejercicios de repaso: ut02/repaso.md
       - Autoevaluación: ut02/autoevaluacion.md
+  - UT03. Funciones:
+      - ut03/index.md
+      - "a) Funciones": ut03/a-funciones.md
+      - "b) Recursividad": ut03/b-recursividad.md
+      - Ejercicios de repaso: ut03/repaso.md
+      - Autoevaluación: ut03/autoevaluacion.md

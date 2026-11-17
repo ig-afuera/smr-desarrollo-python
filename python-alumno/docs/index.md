@@ -18,7 +18,7 @@ En la [UT01 · apartado a)](ut01/a-estructura.md#3-entorno-de-trabajo) verás c�
 |---|---|---|
 | [UT01](ut01/index.md) | Identificación de los elementos de un programa informático | Disponible |
 | [UT02](ut02/index.md) | Uso de estructuras de control | Disponible |
-| UT03 | Funciones | Próximamente |
+| [UT03](ut03/index.md) | Funciones | Disponible |
 | UT04 | Cadenas, listas, tuplas y diccionarios | Próximamente |
 | UT05 | Lectura y escritura de información | Próximamente |
 | UT06 | Programación orientada a objetos | Próximamente |
