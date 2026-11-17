@@ -279,7 +279,91 @@ except ValueError as error:
 
     Pista: `texto.isdigit()` devuelve `True` si todos los caracteres de `texto` son cifras.
 
-## 7. Validación de entradas con excepciones
+## 7. Aserciones: `assert`
+
+Una **aserción** es una comprobación que el programador escribe para asegurarse de que algo que **debe ser cierto** lo es de verdad. Si la condición es falsa, Python lanza un `AssertionError` y el programa se detiene.
+
+```python
+assert condición, "mensaje si la condición es falsa"
+```
+
+- Si la condición es `True`, no pasa nada y el programa sigue.
+- Si es `False`, se lanza `AssertionError` con el mensaje indicado (el mensaje es opcional).
+
+```pycon
+>>> stock = 5
+>>> assert stock >= 0, "El stock no puede ser negativo"
+>>> stock = -2
+>>> assert stock >= 0, "El stock no puede ser negativo"
+Traceback (most recent call last):
+  ...
+AssertionError: El stock no puede ser negativo
+```
+
+Es una forma abreviada de escribir:
+
+```python
+if not stock >= 0:
+    raise AssertionError("El stock no puede ser negativo")
+```
+
+### ¿Para qué sirve?
+
+`assert` sirve para detectar **errores del propio programa** (errores lógicos), no errores del usuario. Se coloca en los puntos donde «es imposible» que algo falle si el código está bien escrito:
+
+```python
+nota1 = float(input("Nota 1: "))
+nota2 = float(input("Nota 2: "))
+nota3 = float(input("Nota 3: "))
+
+media = (nota1 + nota2 + nota3) / 3
+
+# Si las notas están entre 0 y 10, la media también debe estarlo
+assert 0 <= media <= 10, f"Media imposible: {media}"
+
+print(f"Media: {media:.2f}")
+```
+
+Si algún día alguien cambia la fórmula y se equivoca (por ejemplo, divide entre 2), el `assert` lo detecta en cuanto la media se salga de rango, en lugar de mostrar un resultado falso sin avisar.
+
+### `assert` frente a `raise`
+
+| | `raise` | `assert` |
+|---|---|---|
+| Para qué | Avisar de **datos incorrectos** (lo que escribe el usuario, lo que llega de un fichero...). | Comprobar que **el código hace lo que debe**. |
+| Quién tiene la culpa | El dato de entrada. | El programador. |
+| ¿Se puede desactivar? | No. | Sí: con `python -O programa.py` los `assert` **se ignoran**. |
+
+!!! warning "No valides entradas con `assert`"
+    Como los `assert` se pueden desactivar, **nunca** los uses para comprobar lo que escribe el usuario. Para eso usa `if` + `raise` o el patrón de validación del siguiente apartado.
+
+!!! danger "Cuidado con los paréntesis"
+    `assert` **no es una función**. Si escribes la condición y el mensaje entre paréntesis, creas una tupla, que siempre es *truthy*, y el `assert` **nunca falla**:
+
+    ```python
+    assert (stock >= 0, "Stock negativo")   # MAL: nunca falla
+    assert stock >= 0, "Stock negativo"     # BIEN
+    ```
+
+!!! success "Ahora tú"
+    **Conversor de segundos.** Construye un programa que pida una cantidad de segundos y la muestre en horas, minutos y segundos:
+
+    ```text
+    Segundos: 3725
+    1 h 2 min 5 s
+    ```
+
+    Pista: usa `//` y `%`.
+
+    Después, añade **tres aserciones** antes del `print` final que comprueben que tus cálculos son correctos:
+
+    1. Los minutos están entre 0 y 59.
+    2. Los segundos restantes están entre 0 y 59.
+    3. Al volver a juntarlo todo (`horas * 3600 + minutos * 60 + segundos`) se obtiene la cantidad inicial.
+
+    Para comprobar que funcionan, introduce a propósito un error en el cálculo de los minutos (por ejemplo, usa `% 100` en lugar de `% 60`) y prueba con `3725`. ¿Qué `assert` salta?
+
+## 8. Validación de entradas con excepciones
 
 Es el patrón más útil de esta unidad: **pedir un dato hasta que sea válido**.
 
@@ -324,7 +408,7 @@ Cómo funciona:
 
     Fíjate en que el mismo patrón se repite tres veces: en la UT03 aprenderás a escribirlo una sola vez con una **función**.
 
-## 8. Excepciones personalizadas: introducción
+## 9. Excepciones personalizadas: introducción
 
 Puedes crear tus propios tipos de excepción **heredando** de `Exception`. Es una «receta» que entenderás del todo en la UT06:
 
@@ -353,7 +437,7 @@ Un nombre propio hace que el error sea más descriptivo y fácil de capturar por
     3. Lance la excepción adecuada si se supera alguno de los límites, con un mensaje como `Sobran 2 personas` o `Sobran 35.5 kg`.
     4. Capture cada una por separado y muestre el aviso. Si todo va bien, muestre `Puertas cerrándose...`.
 
-## 9. Depuración básica
+## 10. Depuración básica
 
 Depurar es **encontrar y corregir errores**. Tres herramientas:
 
@@ -408,5 +492,6 @@ El panel **Variables** (a la izquierda) muestra los valores actuales. Con él pu
 - Errores de **sintaxis**, de **ejecución** (excepciones) y **lógicos**.
 - `try` / `except` captura errores concretos; `finally` se ejecuta siempre, incluso si el error no se captura o se sale con `break`.
 - `raise` lanza una excepción.
+- `assert` comprueba que el código hace lo que debe; no sirve para validar entradas del usuario.
 - Patrón de validación: `while True` + `try` / `except` + `break`.
 - Depura con la traza, `print()` y el depurador de VS Code.
