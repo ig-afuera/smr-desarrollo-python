@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category><text>$course$/top/UT01/Test teoría</text></category>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 01 [a · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre los lenguajes compilados e interpretados, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — En un lenguaje interpretado no se genera ningún archivo: hace falta el intérprete cada vez que se ejecuta el programa.</p>
+<p><strong>Trampa:</strong> la C parece una ventaja exagerada de los compilados, pero es cierta.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Un compilador traduce el programa entero antes de ejecutarlo y genera un archivo ejecutable.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[El intérprete de Python traduce y ejecuta el programa línea a línea.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Los programas compilados suelen ejecutarse más rápido.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Al ejecutar un programa de Python se genera un ejecutable que después funciona sin intérprete.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 02 [a · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas afirmaciones sobre un <strong>algoritmo</strong> es correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — Un algoritmo son pasos ordenados, precisos y <strong>finitos</strong>. Puede escribirse en lenguaje natural o en pseudocódigo; cuando se escribe en un lenguaje de programación, es un programa.</p>
+<p><strong>Trampa:</strong> la C confunde algoritmo con programa.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Tiene que terminar en un número finito de pasos, por complejo que sea el problema.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Sus pasos pueden ser ambiguos si quien programa los entiende.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Se escribe siempre directamente en un lenguaje de programación.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna es correcta.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 03 [a · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuáles de estos identificadores son válidos?</p>
+<pre><code>If      _total      nota2</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — <code>If</code> no es la palabra reservada <code>if</code>, porque Python distingue mayúsculas de minúsculas. <code>_total</code> puede empezar por guion bajo y <code>nota2</code> lleva el dígito al final.</p>
+<p><strong>Trampa:</strong> <code>If</code> «suena» a palabra reservada, y el guion bajo inicial parece prohibido.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Solo <code>nota2</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>_total</code> y <code>nota2</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Solo <code>_total</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Los tres.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 04 [a · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre la estructura de un programa en Python, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — Todas las líneas de un bloque deben tener <strong>el mismo</strong> sangrado; si no, se produce un <code>IndentationError</code>.</p>
+<p><strong>Trampa:</strong> la B tiene una parte cierta (el bloque va más a la derecha) que esconde el error.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Las sentencias se ejecutan de arriba abajo, una tras otra.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Las líneas de un mismo bloque pueden tener tabulados distintos, siempre que estén más a la derecha que la línea de los dos puntos.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[No hace falta poner punto y coma al final de cada sentencia.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Dentro de unos paréntesis, una sentencia puede continuar en la línea siguiente.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 05 [a · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un programa calcula el precio de un producto después de aplicarle un descuento. ¿Qué acción corresponde a la fase de <strong>prueba</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — Hay que probar con <strong>varios</strong> datos, incluidos casos extremos. A es codificación y B es análisis.</p>
+<p><strong>Trampa:</strong> la D es lo que se suele hacer, pero un solo ejemplo no demuestra que el programa funcione.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Escribir el código en Python.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Decidir qué datos entran y qué resultado sale.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Ejecutarlo con varios datos distintos y comprobar los resultados.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ejecutarlo una vez con el ejemplo del enunciado: si el resultado coincide, el programa es correcto.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 06 [b · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre la consola de Python, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — Lo que escribes en el REPL <strong>no se guarda</strong>. Para conservar un programa hay que escribirlo en un archivo <code>.py</code>.</p>
+<p><strong>Trampa:</strong> como la consola se abre desde una carpeta, parece que guarda en ella.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Lo que escribes se guarda automáticamente en un archivo <code>.py</code> de la carpeta actual.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Se abre escribiendo <code>python</code> en una terminal.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Muestra el símbolo <code>&gt;&gt;&gt;</code> cuando espera una instrucción.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>help()</code> muestra la ayuda sin necesidad de internet.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 07 [b · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un cuaderno de Jupyter tiene tres celdas:</p>
+<pre><code># Celda 1
+descuento = 10</code></pre>
+<pre><code># Celda 2
+descuento = 25</code></pre>
+<pre><code># Celda 3
+print(descuento)</code></pre>
+<p>Las ejecutas en este orden: celda 2, celda 1 y celda 3. ¿Qué muestra la celda 3?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — El cuaderno guarda las variables según el <strong>orden de ejecución</strong>. La última asignación ejecutada fue la de la celda 1.</p>
+<p><strong>Trampa:</strong> leer las celdas en el orden de la página lleva a responder 25.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>10</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>25</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>NameError</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>35</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 08 [b · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué lista contiene <strong>solo</strong> fases del desarrollo de un programa?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — Las fases son análisis, diseño, codificación, prueba, documentación y mantenimiento. Compilación, ejecución e interpretación no son fases de desarrollo.</p>
+<p><strong>Trampa:</strong> cada opción incorrecta tiene dos fases ciertas y una palabra que «suena» a programar; el mantenimiento se olvida con facilidad.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Análisis, compilación y prueba.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Análisis, diseño y mantenimiento.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Diseño, ejecución y documentación.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Codificación, interpretación y prueba.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 09 [c · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>VS Code subraya en amarillo una línea de tu programa. ¿Cuál de estas afirmaciones es correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — El subrayado es un aviso del editor (con la extensión de Python), no un error de Python. Por ejemplo, avisa cuando no se cumple una anotación de tipo, y el programa se ejecuta igual.</p>
+<p><strong>Trampa:</strong> asociar cualquier subrayado con «no compila».</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[El programa no se podrá ejecutar hasta corregirla.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Puede indicar algo que incumple el estilo o un posible problema; el programa puede ejecutarse igualmente.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Significa que esa línea ya se ha ejecutado.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna es correcta.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 10 [c · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En la consola de Python has escrito <code>help(round)</code> y se muestra la ayuda. ¿Qué haces para volver al símbolo <code>&gt;&gt;&gt;</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — La <code>q</code> sale de la ayuda y vuelve a la consola. <code>exit()</code> y <code>Ctrl+Z</code> + Enter sirven para salir de la <strong>consola</strong>, no de la ayuda.</p>
+<p><strong>Trampa:</strong> confundir salir de la ayuda con salir de la consola.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Escribir <code>exit()</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Pulsar <code>Ctrl+Z</code> y después Enter.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Pulsar la tecla <code>q</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna: hay que cerrar la terminal y abrirla otra vez.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 11 [d · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Para cuál de estos datos es más adecuado el tipo <code>str</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — Con un teléfono no se hacen cálculos y puede llevar prefijo o ceros iniciales. Los otros tres son <code>int</code>; la planta también, aunque sea negativa.</p>
+<p><strong>Trampa:</strong> el teléfono «es un número» y la planta negativa parece un caso raro.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Un número de teléfono.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[El número de alumnos matriculados.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[El año de nacimiento.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[La planta de un edificio (puede ser <code>-1</code> para el sótano).]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 12 [d · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre los tipos de datos, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — <code>/</code> devuelve <strong>siempre</strong> <code>float</code>: <code>9 / 3</code> es <code>3.0</code>.</p>
+<p><strong>Trampa:</strong> «la división es exacta» parece una buena razón para que salga un entero.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>5</code> y <code>5.0</code> son de tipos distintos.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[El resultado de <code>9 / 3</code> es de tipo <code>int</code>, porque la división es exacta.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[En una operación, <code>True</code> vale 1.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>"25"</code> es de tipo <code>str</code>, aunque parezca un número.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 13 [d · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre la inmutabilidad, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — Python crea un objeto <strong>nuevo</strong> con el resultado y hace que <code>x</code> apunte a él; el número original no cambia.</p>
+<p><strong>Trampa:</strong> como el valor de <code>x</code> cambia, parece que cambia el objeto.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Al ejecutar <code>x += 1</code>, el número que había en memoria se modifica.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Los tipos <code>int</code>, <code>float</code>, <code>bool</code> y <code>str</code> son inmutables.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Tras <code>x = x + 1</code>, <code>id(x)</code> devuelve un valor distinto al de antes.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Una cadena no se puede modificar carácter a carácter.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 14 [d · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué pareja dato–tipo es la adecuada?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — Una medida con decimales es <code>float</code>. El precio también necesita <code>float</code>, el «sí/no» es un <code>bool</code> y la matrícula, que lleva letras, un <code>str</code>.</p>
+<p><strong>Trampa:</strong> la B funciona en la práctica, pero para un dato de sí o no el tipo adecuado es <code>bool</code>.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Precio de un ratón, <code>12.99</code> → <code>int</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[¿Está encendido el servidor? → <code>str</code> con el valor <code>"sí"</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Temperatura de la CPU, <code>67.5</code> → <code>float</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Matrícula de un coche, <code>1234ABC</code> → <code>int</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 15 [d · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre el ámbito y el ciclo de vida de las variables, ¿cuál de estas afirmaciones es correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — Una local solo existe mientras se ejecuta su función y en Python las variables no se declaran: nacen al asignarles un valor. Como A y B son falsas, la C tampoco es correcta.</p>
+<p><strong>Trampa:</strong> la A es cierta para las globales, no para las locales.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Una variable local sigue existiendo cuando termina su función, hasta que se cierra el programa.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Antes de asignar un valor a una variable hay que declararla con su tipo.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Todas son correctas.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Una variable creada fuera de cualquier función es global y se puede usar en todo el programa.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 16 [d · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre las anotaciones de tipo, por ejemplo <code>curso: int = 1</code>, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — Python <strong>no</strong> las comprueba al ejecutar; solo el editor avisa.</p>
+<p><strong>Trampa:</strong> la C (el editor avisa) hace pensar que Python también lo impide.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ayudan a quien lee el código a saber qué tipo se espera.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Si el valor no cumple la anotación, Python detiene el programa con un error.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[VS Code puede avisar cuando el valor no encaja con la anotación.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Son una forma de documentación.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 17 [e · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Se quiere que el programa muestre <code>Total: 30</code>. ¿Qué modificación <strong>NO</strong> funciona en el lugar del comentario?</p>
+<pre><code>unidades = 3
+precio = 10
+# aquí</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — La variable va a la <strong>izquierda</strong> del <code>=</code>; escrita así da <code>SyntaxError</code>. La D funciona, aunque cambia el valor de <code>unidades</code>.</p>
+<p><strong>Trampa:</strong> la D parece la incorrecta porque «estropea» <code>unidades</code>, pero muestra <code>Total: 30</code>.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>unidades * precio = total</code> y <code>print("Total:", total)</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>total = unidades * precio</code> y <code>print("Total:", total)</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>print("Total:", unidades * precio)</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>unidades *= precio</code> y <code>print("Total:", unidades)</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 18 [e · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra este programa?</p>
+<pre><code>visitas = 0
+visitas + 1
+visitas += 2
+print(visitas)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — La segunda línea calcula <code>1</code>, pero no lo guarda en ninguna variable. Solo <code>visitas += 2</code> cambia su valor.</p>
+<p><strong>Trampa:</strong> leer <code>visitas + 1</code> como si sumara y responder 3.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>3</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>1</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>2</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>0</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 19 [e · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué ocurre al ejecutar este programa?</p>
+<pre><code>total_compra = 40
+gastos_envio = 5
+print(total_compra + gastos_envío)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — La tilde de la última línea crea un nombre distinto, que no existe. Se arregla escribiendo <code>gastos_envio</code> sin tilde.</p>
+<p><strong>Trampa:</strong> la C parece lógica, pero Python <strong>sí</strong> admite tildes en los nombres; se evitan porque provocan errores como este.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Muestra <code>45</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>NameError</code>, porque <code>gastos_envío</code> y <code>gastos_envio</code> son nombres distintos.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>SyntaxError</code>, porque los nombres de variable no pueden llevar tildes.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Muestra <code>40</code>, porque la variable con tilde vale 0.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 20 [e · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Este programa muestra <code>11.0</code> cuando la media debería ser <code>7.0</code>:</p>
+<pre><code>nota_teoria = 8
+nota_practica = 6
+media = nota_teoria + nota_practica / 2</code></pre>
+<p>¿Qué modificación <strong>NO</strong> lo arregla?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — El paréntesis rodea toda la expresión, pero dentro sigue dividiéndose antes que sumarse: el resultado sigue siendo <code>11.0</code>.</p>
+<p><strong>Trampa:</strong> la C parece incorrecta y es válida (4 + 3 = 7.0); la D «tiene paréntesis» y parece la solución.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>media = (nota_teoria + nota_practica) / 2</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>suma = nota_teoria + nota_practica</code> y <code>media = suma / 2</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>media = nota_teoria / 2 + nota_practica / 2</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>media = (nota_teoria + nota_practica / 2)</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 21 [f · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuánto vale <code>0o20 + 0b11</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — <code>0o20</code> en octal es 16 y <code>0b11</code> en binario es 3: 16 + 3 = 19.</p>
+<p><strong>Trampa:</strong> la A suma las cifras como si fueran decimales (20 + 11) y la C lee <code>0o20</code> como hexadecimal (32 + 3).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>31</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>19</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>35</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna es correcta: da <code>SyntaxError</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 22 [f · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuántas líneas muestra este <code>print</code>?</p>
+<pre><code>print("Router\tA\nRouter\\nB")</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — Muestra <strong>2</strong> líneas: <code>\t</code> es un tabulador, <code>\n</code> un salto de línea y <code>\\n</code> es una barra invertida seguida de la letra <code>n</code>, no un salto.</p>
+<p><strong>Trampa:</strong> contar los dos <code>\n</code> y responder 3.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[1]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[3]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Da error.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Ninguna de las anteriores es correcta.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 23 [f · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estos nombres es una constante del módulo <code>math</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — <code>math.e</code> es el número de Euler y <code>math.inf</code> es el infinito positivo.</p>
+<p><strong>Trampa:</strong> solo se recuerda <code>math.pi</code> y se descartan las demás.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>math.e</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>math.inf</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Todas lo son.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 24 [f · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Según la regla práctica de los «números mágicos», ¿qué números de este programa conviene convertir en constantes?</p>
+<pre><code>horas = float(input("Horas: "))
+sueldo = horas * 11.5
+extra = sueldo * 0.15
+total = sueldo + extra
+print(total)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — Los dos tienen un significado propio (precio por hora y porcentaje extra), aunque aparezcan una sola vez: <code>PRECIO_HORA = 11.5</code> y <code>PORCENTAJE_EXTRA = 0.15</code>.</p>
+<p><strong>Trampa:</strong> la regla dice «se repite <strong>o</strong> tiene un significado propio»; la A solo se fija en la repetición.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguno: cada número aparece una sola vez.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Solo <code>11.5</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>11.5</code> y <code>0.15</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Solo <code>0.15</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 25 [f · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra <code>print(0 and 5 / 0)</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — Por el cortocircuito, <code>and</code> no evalúa la división, porque <code>0</code> ya es falso, y devuelve <strong>el propio operando</strong>: <code>0</code>.</p>
+<p><strong>Trampa:</strong> dos a la vez: creer que se calcula <code>5 / 0</code> (A) y que <code>and</code> siempre devuelve <code>True</code> o <code>False</code> (B).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>ZeroDivisionError</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>0</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>None</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 26 [f · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra <code>print(not 3 &gt; 5 and 2 == 2.0)</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — La comparación va antes que <code>not</code>: <code>not (3 &gt; 5)</code> es <code>True</code>. Además, <code>2 == 2.0</code> es <code>True</code>, porque se comparan valores. <code>True and True</code> da <code>True</code>.</p>
+<p><strong>Trampa:</strong> aplicar <code>not</code> solo al <code>3</code>, o pensar que <code>2</code> y <code>2.0</code> no son iguales por ser de tipos distintos.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>True</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>TypeError</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>None</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 27 [g · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas operaciones da un resultado de tipo <code>int</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — La división entera de dos enteros da <code>int</code> (<code>4</code>). En las demás hay un <code>float</code> o una división <code>/</code>, y el resultado es <code>float</code>.</p>
+<p><strong>Trampa:</strong> <code>7 / 7</code> da un número «redondo» (<code>1.0</code>) y parece un entero.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>7 / 7</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>True + 0.5</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>9 // 2</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>2 * 1.0</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 28 [g · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas expresiones <strong>NO</strong> produce ningún error?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — <code>int("7")</code> da <code>7</code>, y <code>7 + 3.5</code> se convierte de forma implícita en <code>10.5</code>. B y D dan <code>ValueError</code> y C da <code>TypeError</code>.</p>
+<p><strong>Trampa:</strong> la A mezcla texto, entero y decimal, y parece la más peligrosa.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>int("7") + 3.5</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>int("siete")</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>"7" + 3</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>float("7,5")</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 29 [g · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué valores dan, en este orden, <code>int(-4.6)</code>, <code>round(-4.6)</code>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — Dan <code>-4</code> y <code>-5</code>. <code>int()</code> corta los decimales y <code>round()</code> redondea al entero más cercano.</p>
+<p><strong>Trampa:</strong> pensar que <code>int()</code> y <code>round()</code> hacen lo mismo (opciones A y B).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>-4</code>, <code>-4</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>-5</code>, <code>-5</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>-4</code>, <code>-5</code>,]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna de las anteriores es correcta.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 30 [h · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Sobre los comentarios, ¿cuál de estas afirmaciones es <strong>INCORRECTA</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — Python no tiene comentarios de bloque. Las triples comillas sueltas son una cadena que no se usa, y por convención se reservan para los docstrings.</p>
+<p><strong>Trampa:</strong> se usa mucho así y funciona, por eso parece un comentario oficial.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Un texto entre triples comillas que no se asigna a nada es el comentario de bloque de Python.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Python ignora todo lo que va después de <code>#</code> hasta el final de la línea.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Para comentar varias líneas se pone un <code>#</code> en cada una.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna es incorrecta]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Teoría 31 [h · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas es una buena práctica al comentar el código?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — El comentario debe explicar el <strong>porqué</strong>; el qué ya lo dice el código. El código comentado «por si acaso» ensucia el programa y acaba desactualizado.</p>
+<p><strong>Trampa:</strong> la B parece una medida prudente y la A, una muestra de buen trabajo.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Comentar cada línea, aunque sea obvia: <code>x = 5  # x vale 5</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Dejar comentados los bloques de código antiguos por si vuelven a hacer falta.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Explicar en el comentario por qué se ha tomado una decisión que no es evidente.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna de las anteriores.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+</quiz>
