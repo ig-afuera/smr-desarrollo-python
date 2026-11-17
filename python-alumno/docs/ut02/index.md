@@ -20,6 +20,7 @@ Al terminar esta unidad serás capaz de:
 | [b) Estructuras de repetición](b-repeticion.md) | Repetir: `while`, `for`, `range()`. |
 | [c) Estructuras de salto](c-salto.md) | Controlar el bucle: `break`, `continue`, `pass`. |
 | [d) Control de excepciones](d-excepciones.md) | Anticipar errores: `try`, `except`, `raise`. |
+| [Ejercicios de repaso](repaso.md) | Cinco casos prácticos de dificultad creciente, con soluciones. |
 | [Autoevaluación](autoevaluacion.md) | Preguntas, ejercicios y proyecto de práctica, con soluciones. |
 
 !!! info "Esta unidad se apoya en la anterior"
