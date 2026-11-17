@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category><text>$course$/top/UT01/Test práctica</text></category>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 01 [a · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas líneas, ejecutada por separado, produce un <strong>error</strong>?</p>
+<pre><code>true = 1        # línea A
+print = 1       # línea B
+True = 1        # línea C</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — <code>True</code> es una palabra reservada: <code>SyntaxError: cannot assign to True</code>. <code>true</code> (en minúscula) es un nombre válido y <code>print = 1</code> funciona aunque «pisa» la función.</p>
+<p><strong>Trampa:</strong> la línea B parece la peligrosa, pero Python la acepta sin quejarse; el problema aparecería después, al intentar usar <code>print()</code>.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Línea A]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Línea B]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Línea C]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Ninguna produce error]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 02 [b · básica]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Se quiere intercambiar el valor de dos variables. ¿Qué muestra el programa?</p>
+<pre><code>a = 3
+b = 7
+a = b
+b = a
+print(a, b)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — En la tercera línea <code>a</code> pasa a valer 7 y el 3 se pierde. Cuando se ejecuta <code>b = a</code>, <code>a</code> ya vale 7.</p>
+<p><strong>Trampa:</strong> parece un intercambio, pero para eso hace falta <code>a, b = b, a</code> (o una variable auxiliar).</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>7 3</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>3 7</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>7 7</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>3 3</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 03 [c · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>print(bool("0.0"), bool(0.0), bool(" "), bool(""))</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — <code>"0.0"</code> y <code>" "</code> son textos <strong>no vacíos</strong> → <code>True</code>. <code>0.0</code> es el número cero → <code>False</code>. <code>""</code> es el texto vacío → <code>False</code>.</p>
+<p><strong>Trampa:</strong> el texto <code>"0.0"</code> «parece» cero, y el espacio <code>" "</code> «parece» vacío.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>False False False False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>False False True False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>True False True False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>True True True False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 04 [c · básica]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>x = "3"
+y = x * 3
+print(y + "1")</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — <code>x</code> es texto: <code>"3" * 3</code> repite el texto (<code>"333"</code>) y <code>+ "1"</code> lo concatena.</p>
+<p><strong>Trampa:</strong> las comillas de la primera línea pasan desapercibidas y se calcula <code>3 * 3 + 1</code>.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>10</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>91</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>3331</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>TypeError</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 05 [c · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>edad: int = "veinte"
+edad = edad + " años"
+print(type(edad))</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — Las anotaciones de tipo son solo documentación: Python no las comprueba. <code>edad</code> guarda un texto y se concatena sin problemas.</p>
+<p><strong>Trampa:</strong> creer que <code>: int</code> obliga a que la variable sea un entero.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>&lt;class 'int'&gt;</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>&lt;class 'str'&gt;</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>TypeError</code>, porque <code>edad</code> debe ser <code>int</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>SyntaxError</code> en la primera línea.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 06 [c · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>print(len(str(10 / 2)))</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — <code>10 / 2</code> vale <code>5.0</code> (la división <code>/</code> siempre da <code>float</code>). Convertido a texto es <code>"5.0"</code>, que tiene 3 caracteres.</p>
+<p><strong>Trampa:</strong> pensar que <code>10 / 2</code> es <code>5</code> y que su texto tiene un solo carácter.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>1</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>2</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>3</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>TypeError</code>: <code>len()</code> no funciona con números.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 07 [e · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>import math
+
+math.pi = 3
+print(round(math.pi * 2))</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — Python no tiene constantes reales: incluso <code>math.pi</code> se puede reasignar. A partir de esa línea vale 3, y <code>round(3 * 2)</code> es 6.</p>
+<p><strong>Trampa:</strong> dar por hecho que las constantes predefinidas están protegidas.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>6</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>6.283185307179586</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>AttributeError</code>: no se puede modificar <code>math.pi</code>.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>SyntaxError</code>: <code>math.pi</code> es una constante.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 08 [e · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>DESCUENTO = 0.10
+precio = 50
+final = precio - precio * DESCUENTO
+DESCUENTO = 0.50
+print(final)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — <code>final</code> se calculó cuando <code>DESCUENTO</code> valía 0.10. Cambiar la constante después no recalcula nada.</p>
+<p><strong>Trampa:</strong> pensar que <code>final</code> «se actualiza» como una fórmula de hoja de cálculo. La opción C olvida que multiplicar por un <code>float</code> da <code>float</code>.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>25.0</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>45.0</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>45</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Un error, <code>DESCUENTO</code> es una constante y no se puede reasignar]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 09 [f · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>print(-3 ** 2 + 10 // 3 * 2)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — <code>**</code> va antes que el signo: <code>-(3 ** 2)</code> = -9. Luego <code>10 // 3 * 2</code> (izquierda a derecha) = 3 * 2 = 6. Total: -9 + 6 = -3.</p>
+<p><strong>Trampa:</strong> calcular <code>(-3) ** 2 = 9</code>, que da 15 (opción A), o hacer <code>3 * 2</code> antes que <code>10 // 3</code>.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>15</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>-3</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>9.67</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>-7</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 10 [f · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>print((5 &gt; 4) &gt; 3)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: B</strong> — <code>5 &gt; 4 &gt; 3</code> es una comparación encadenada: <code>5 &gt; 4 and 4 &gt; 3</code> → <code>True</code>. En cambio, <code>(5 &gt; 4) &gt; 3</code> compara <code>True &gt; 3</code>, es decir, <code>1 &gt; 3</code> → <code>False</code>.</p>
+<p><strong>Trampa:</strong> los paréntesis parecen no cambiar nada, pero rompen el encadenamiento.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>True</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>False</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>TypeError</code> ya que no se pueden comparar un booleano y un entero]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>ValueError</code> no se pueden usar paréntesis con operaciones booleanas]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 11 [g · avanzada]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>print(int(-2.7) + int("08"))</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: A</strong> — <code>int(-2.7)</code> trunca (quita los decimales) → -2. <code>int("08")</code> → 8. Total: -2 + 8 = 6.</p>
+<p><strong>Trampa:</strong> dos a la vez: <code>int</code> corta en vez de redondear (si diera -3 saldría 5, la opción B) y el cero a la izquierda en un texto no molesta.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>6</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>5</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>ValueError</code>, porque <code>"08"</code> empieza por cero.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[Otro error distinto a <code>ValueError</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 12 [g · básica]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El usuario escribe <code>4</code> y después <code>5</code>. ¿Qué muestra el programa?</p>
+<pre><code>a = input("Número: ")
+b = input("Número: ")
+print(a + b * 2)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — <code>input()</code> siempre devuelve texto. <code>b * 2</code> repite el texto (<code>"55"</code>) y <code>+</code> lo concatena con <code>"4"</code>.</p>
+<p><strong>Trampa:</strong> olvidar que no hay conversión. La opción D sale si se hace la suma antes que la multiplicación.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>14</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>18</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>455</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>4545</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 13 [g · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuál de estas expresiones produce un <strong>error</strong>?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: C</strong> — A da <code>3</code>: <code>float("3.9")</code> convierte el texto en <code>3.9</code> y <code>int()</code> lo trunca. B da <code>3.0</code> y D da <code>'3.01'</code>.</p>
+<p><strong>Trampa:</strong> <code>int("3.9")</code> sí daría <code>ValueError</code>, porque <code>int()</code> no acepta textos con punto decimal; pero aquí el texto pasa antes por <code>float()</code>, que sí lo acepta.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>int(float("3.9"))</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>float("3")</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[Ninguna, todas funcionan correctamente.]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>str(3.0) + "1"</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+  <question type="multichoice">
+    <name><text>UT01 Práctica 14 [h · media]</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Qué muestra el programa?</p>
+<pre><code>x = 5  # x = 10
+"""
+x = 20
+"""
+# x = 30
+print(x)</code></pre>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><strong>Respuesta: D</strong> — Lo que va tras <code>#</code> se ignora, y lo que hay entre triples comillas es una cadena suelta que no se asigna a nada: <code>x = 20</code> es texto, no una instrucción.</p>
+<p><strong>Trampa:</strong> creer que el código dentro de las triples comillas se ejecuta.</p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>0</shuffleanswers>
+    <answernumbering>ABCD</answernumbering>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>10</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>20</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="-33.33333" format="html">
+      <text><![CDATA[<code>30</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<code>5</code>]]></text>
+      <feedback><text></text></feedback>
+    </answer>
+  </question>
+</quiz>
